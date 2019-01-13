@@ -25,3 +25,17 @@ let numeros2 = numeros.map((item) => {
 })
 
 //console.log(numeros2);
+
+
+// Exe. 4.9
+function exibeNoConsole(lista) {
+    lista.forEach(item => console.log(item));
+}
+
+let listaDeNomes1 = ['Flávio', 'Rogers', 'Júlia'];
+let listaDeNomes2 = ['Vieira', 'Fernanda', 'Gerson'];
+
+listaDeNomes1.push(...listaDeNomes2);
+exibeNoConsole(listaDeNomes1);
+
+// alternativa let lista = [...listaDeNomes1,...listaDeNomes2];
