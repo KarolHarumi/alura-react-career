@@ -1,10 +1,14 @@
-class NegociacoesView {
+class NegociacoesView extends View {
 
+    // Por padrão, quando uma classe herda outra, ela também herda seu construtor, pode remover
+    // Existem situacoes em que o constructor eé necessario, porem nao e o caso
     constructor(elemento) {
-        this._elemento = elemento;
+
+        super(elemento);
+
     }
 
-    _template(model) {
+    template(model) {
 
         return `
         <table class="table table-hover table-bordered">
@@ -41,11 +45,6 @@ class NegociacoesView {
         </table>
         `;
 
-    }
-
-    update(model) {
-
-        this._elemento.innerHTML = this._template(model);
     }
 
 }
